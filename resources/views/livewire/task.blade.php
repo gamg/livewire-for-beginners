@@ -7,9 +7,6 @@
         <button type="submit" class="bg-indigo-700 text-white font-bold w-full rounded shadow p-2">Guardar</button>
     </form>
 
-    @if(session()->has('message'))
-        <h3 class="bg-blue-400 font-bold mb-4 p-2 rounded text-center text-sm text-white">{{ session('message') }}</h3>
-    @endif
 
     <table class="shadow-md">
         <thead>
