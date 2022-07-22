@@ -7,7 +7,6 @@
         <button type="submit" class="bg-indigo-700 text-white font-bold w-full rounded shadow p-2">Guardar</button>
     </form>
 
-
     <table class="shadow-md">
         <thead>
         <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
@@ -22,7 +21,7 @@
                     <td class="px-4 py-2"><input type="checkbox"></td>
                     <td class="px-4 py-2">{{ $task->text }}</td>
                     <td class="px-4 py-2">
-                        <button type="button" class="bg-indigo-400 px-2 py-1 text-white text-xs rounded">Editar</button>
+                        <button wire:click="edit({{ $task->id }})" type="button" class="bg-indigo-400 px-2 py-1 text-white text-xs rounded">Editar</button>
                         <button type="button" class="bg-red-500 px-2 py-1 text-white text-xs rounded">Eliminar</button>
                     </td>
                 </tr>
