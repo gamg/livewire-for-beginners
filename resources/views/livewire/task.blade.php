@@ -17,9 +17,9 @@
         </thead>
         <tbody class="text-gray-600">
             @forelse($tasks as $task)
-                <tr class="border-b border-gray-200">
-                    <td class="px-4 py-2"><input type="checkbox"></td>
-                    <td class="px-4 py-2">{{ $task->text }}</td>
+                <tr class="border-b border-gray-200 {{ $task->done ? 'bg-green-200' : '' }}">
+                    <td class="px-4 py-2"><input type="checkbox" wire:click="done({{ $task->id }})" {{ $task->done ? 'checked' : '' }}></td>
+                    <td class="px-4 py-2 {{ $task->done ? 'line-through' : '' }}">{{ $task->text }}</td>
                     <td class="px-4 py-2">
                         <button wire:click="edit({{ $task->id }})" type="button" class="bg-indigo-400 px-2 py-1 text-white text-xs rounded">Editar</button>
                         <button wire:click="delete({{ $task->id }})" type="button" class="bg-red-500 px-2 py-1 text-white text-xs rounded">Eliminar</button>
