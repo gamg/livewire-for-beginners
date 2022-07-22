@@ -22,7 +22,7 @@
                     <td class="px-4 py-2">{{ $task->text }}</td>
                     <td class="px-4 py-2">
                         <button wire:click="edit({{ $task->id }})" type="button" class="bg-indigo-400 px-2 py-1 text-white text-xs rounded">Editar</button>
-                        <button type="button" class="bg-red-500 px-2 py-1 text-white text-xs rounded">Eliminar</button>
+                        <button wire:click="delete({{ $task->id }})" type="button" class="bg-red-500 px-2 py-1 text-white text-xs rounded">Eliminar</button>
                     </td>
                 </tr>
             @empty
