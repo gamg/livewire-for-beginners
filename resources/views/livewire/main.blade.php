@@ -4,6 +4,10 @@
             {{ $welcome }}
         </h1>
 
+        @if(session()->has('message'))
+            <h3 class="bg-blue-400 font-bold p-2 w-1/3 rounded text-center text-sm text-white">{{ session('message') }}</h3>
+        @endif
+
         <livewire:task/>
     </section>
 </div>
